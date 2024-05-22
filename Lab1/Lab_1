@@ -1,1 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+// Оголошуємо змінні з точкою float
+        float a = 11;
+        float b = 15;
+        float c = 9;
+        float d = 8;
+        float e = 6;
+        float f = 4;
+        float g = 3;
+        float h = 21;
+        float i = 7;
+        float j = 18;
 
+// Виконуємо операції та виводимо результати
+        System.out.println("Сума: " + (a + b + c + d + e + f + g + h + i + j));
+        System.out.println("Різниця: " + (a - b - c - d - e - f - g - h - i - j));
+        System.out.println("Добуток: " + (a * b * c * d * e * f * g * h * i * j));
+        System.out.println("Частка: " + (a / b / c / d / e / f / g / h / i / j));
+    }
+}
