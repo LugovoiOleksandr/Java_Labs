@@ -1,1 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    // Метод для пошуку найбільшого числа у масиві
+    public static int findMax(int[] array) {
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+// Запит користувача на введення розміру масиву
+        System.out.println("Введіть розмір масиву:");
+        int size = scanner.nextInt();
+// Ініціалізація масиву з введеним користувачем розміром
+        int[] array = new int[size];
+// Запит користувача на введення елементів масиву
+        System.out.println("Введіть елементи масиву:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
 
+// Знаходження та виведення найбільшого числа
+        int max = findMax(array);
+        System.out.println("Найбільше число у масиві: " + max);
+        scanner.close();
+    }
+}
