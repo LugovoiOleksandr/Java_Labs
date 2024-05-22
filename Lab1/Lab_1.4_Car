@@ -1,1 +1,21 @@
-
+public class Car {
+    private int horsepower;
+    private double engineVolume;
+    private String brand;
+    private String model;
+    private int year;
+    public Car(int horsepower, double engineVolume, String brand,
+               String model, int year) {
+        this.horsepower = horsepower;
+        this.engineVolume = engineVolume;
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+    public int getHorsepower() {
+        return horsepower;
+    }
+    public double getEngineVolume() {
+        return engineVolume;
+    }
+}
