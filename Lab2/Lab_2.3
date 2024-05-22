@@ -1,1 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Наберіть число:");
+        int number = scanner.nextInt();
+        if (number >= 10 && number <= 99) {
+            if (number % 2 == 0) {
+                System.out.println("Число двозначне і парне.");
+            } else {
+                System.out.println("Число двозначне, але непарне.");
+            }
+        } else {
+            System.out.println("Число не двозначне");
+        }
+
+        scanner.close();
+    }
+}
 
