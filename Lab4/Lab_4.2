@@ -1,1 +1,36 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {2, 17, 13, 6, 22, 31, 45, 66, 100, -18};
+// Перебір масиву за допомогою циклу while
+        System.out.println("Перебір масиву за допомогою циклу while:");
+        int i = 0;
+        while (i < numbers.length) {
+            System.out.println(numbers[i]);
+            i++;
+        }
+
+// Перебір масиву за допомогою циклу for
+        System.out.println("\nПеребір масиву за допомогою циклу for:");
+        for (int j = 0; j < numbers.length; j++) {
+            System.out.println(numbers[j]);
+        }
+// Перебір масиву за допомогою циклу while та виведеннячисел з непарним індексом
+        System.out.println("\nПеребір масиву за допомогою циклу while (непарні індекси):");
+        i = 1;
+        while (i < numbers.length) {
+            System.out.println(numbers[i]);
+            i += 2;
+        }
+// Перебір масиву за допомогою циклу for та виведення чисел зпарним індексом
+        System.out.println("\nПеребір масиву за допомогою циклу for (парні індекси):");
+        for (int j = 0; j < numbers.length; j += 2) {
+            System.out.println(numbers[j]);
+        }
+// Виведення масиву в зворотньому порядку
+        System.out.println("\nМасив в зворотньому порядку:");
+        for (int j = numbers.length - 1; j >= 0; j--) {
+            System.out.println(numbers[j]);
+        }
+    }
+}
 
