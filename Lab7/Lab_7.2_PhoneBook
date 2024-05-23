@@ -1,1 +1,40 @@
+import java.util.HashMap;
+import java.util.Map;
+public class PhoneBook {
+    public static void main(String[] args) {
+// Створення телефонної книги (HashMap)
+        Map<String, String> phoneBook = new HashMap<>();
+// Додавання записів до книги
+        phoneBook.put("Петеш", "123-456-789");
+        phoneBook.put("Прохоров", "987-654-321");
+        phoneBook.put("Косаренко", "111-222-333");
+        phoneBook.put("Грак", "444-555-666");
+        phoneBook.put("Рибіцький", "777-888-999");
+        phoneBook.put("Дидр", "555-444-333");
+        phoneBook.put("Силор", "999-888-777");
+        phoneBook.put("Павлище", "666-555-444");
+        phoneBook.put("Сенів", "333-222-111");
+        phoneBook.put("Бондаренко", "000-111-222");
+// Виведення всіх записів книги
+        System.out.println("Телефонна книга:");
+        for (Map.Entry<String, String> entry : phoneBook.entrySet())
+        {
+            System.out.println(entry.getKey() + ": " +
+                    entry.getValue());
+        }
+// Пошук номера за прізвищем
+        String surname = "Петеш";
+        if (phoneBook.containsKey(surname)) {
+            System.out.println("\nНомер телефону для " + surname +
+                    ": " + phoneBook.get(surname));
+        } else {
+            System.out.println("\nУ книзі відсутній такий абонент");
+        }
+// Видалення довільного запису з книги
+        phoneBook.remove("Бондаренко");
+// Виведення кількості записів у книзі
+        System.out.println("\nКількість записів у книзі: " +
+                phoneBook.size());
+    }
+}
 
