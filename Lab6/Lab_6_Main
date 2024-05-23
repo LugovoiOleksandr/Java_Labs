@@ -1,1 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+// Створення об'єкта за допомогою конструктора без параметрів
+        Person person1 = new Person();
+        person1.move();
+        person1.talk();
+// Створення об'єкта за допомогою конструктора з параметрами
+        Person person2 = new Person("Макух Юрій", 20);
+        person2.move();
+        person2.talk();
+    }
+}
 
