@@ -1,1 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        Sedan sedan = new Sedan("Supra", "чорний", 200);
+        Truck truck = new Truck("Covrette C7", "білий", 280);
+        sedan.gas();
+        sedan.brake();
+        truck.gas();
+        truck.brake();
+    }
+}
 
