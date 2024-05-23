@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class ReadFromFile {
+    public static void main(String[] args) {
+// Перевірка наявності аргумента командного рядка (ім'я файлу)
+        if (args.length != 1) {
+            System.out.println("Використання: java ReadFromFile <filename>");
+            return;
+        }
+        String filename = args[0];
+        try {
+// Створення об'єкту FileReader та BufferedReader для читання файлу
+            FileReader fileReader = new FileReader(filename);
+            BufferedReader bufferedReader = new
+                    BufferedReader(fileReader);
+// Читання рядків з файлу та виведення їх на консоль
+            String line;
+            System.out.println("Зміст файлу " + filename + ":");
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+// Закриття потоків
+            bufferedReader.close();
+            fileReader.close();
+        } catch (IOException e) {
+            System.out.println("Помилка читання з файлу: " +
+                    e.getMessage());
+        }
+    }
+}
