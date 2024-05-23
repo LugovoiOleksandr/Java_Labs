@@ -1,1 +1,27 @@
+public class Person {
+    private String fullName;
+    private int age;
+    // Конструктор без параметрів
+    public Person() {
+        this.fullName = "Олег Петеш";
+        this.age = 19;
+    }
+    // Конструктор з параметрами
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
+    }
+    // Метод для руху
+    public void move() {
+        System.out.println(fullName + " рухається.");
 
+    }
+    // Метод для розмови
+    public void talk() {
+        System.out.println(fullName + " говорить.");
+        System.out.println(age + " років");
+    }
+    public void age() {
+        System.out.println(age + " років");
+    }
+}
