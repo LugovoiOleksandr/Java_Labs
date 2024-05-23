@@ -1,1 +1,32 @@
-
+abstract class Car {
+    String model;
+    String color;
+    int maxSpeed;
+    Car(String model, String color, int maxSpeed) {
+        this.model = model;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+    }
+    void gas() {
+        System.out.println("Газуємо!");
+    }
+    abstract void brake();
+}
+class Sedan extends Car {
+    Sedan(String model, String color, int maxSpeed) {
+        super(model, color, maxSpeed);
+    }
+    @Override
+    void brake() {
+        System.out.println("Седан гальмує.");
+    }
+}
+class Truck extends Car {
+    Truck(String model, String color, int maxSpeed) {
+        super(model, color, maxSpeed);
+    }
+    @Override
+    void brake() {
+        System.out.println("Кабриолет гальмує.");
+    }
+}
