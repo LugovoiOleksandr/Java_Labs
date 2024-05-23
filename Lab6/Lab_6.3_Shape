@@ -1,1 +1,74 @@
+// Базовий клас "Shape"
+class Shape {
+    private double volume;
+    public Shape(double volume) {
+        this.volume = volume;
+    }
+    public double getVolume() {
+        return volume;
+    }
+    public void printInfo() {
+        System.out.println("Об'єм: " + volume);
+    }
+}
+// Похідний клас "SolidOfRevolution"
+class SolidOfRevolution extends Shape {
+    private double radius;
+    public SolidOfRevolution(double volume, double radius) {
+        super(volume);
+        this.radius = radius;
+    }
+    public double getRadius() {
+        return radius;
+    }
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Радіус: " + radius);
+    }
+}
+// Похідний клас "Cylinder"
+class Cylinder extends SolidOfRevolution {
+    private double height;
+    public Cylinder(double volume, double radius, double height) {
+        super(volume, radius);
+        this.height = height;
+    }
+    public double getHeight() {
+        return height;
+    }
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Висота: " + height);
+    }
+}
+// Похідний клас "Ball"
+class Ball extends SolidOfRevolution {
+    public Ball(double volume, double radius) {
+        super(volume, radius);
+    }
+}
+// Похідний клас "Pyramid"
+class Pyramid extends Shape {
+    private double s;
+    private double h;
+    public Pyramid(double volume, double s, double h) {
+        super(volume);
+        this.s = s;
+        this.h = h;
+    }
+    public double getS() {
+        return s;
+    }
+    public double getH() {
+        return h;
+    }
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Площа основи: " + s);
+        System.out.println("Висота: " + h);
+    }
+}
 
