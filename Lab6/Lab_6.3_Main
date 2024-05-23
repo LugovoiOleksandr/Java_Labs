@@ -1,1 +1,17 @@
-
+class Main {
+    public static void main(String[] args) {
+// Створення об'єктів різних класів
+        Cylinder cylinder = new Cylinder(100, 5, 10);
+        Ball ball = new Ball(50, 3);
+        Pyramid pyramid = new Pyramid(120, 25, 6);
+// Виведення інформації про об'єкти
+        System.out.println("Циліндр:");
+        cylinder.printInfo();
+        System.out.println();
+        System.out.println("Куля:");
+        ball.printInfo();
+        System.out.println();
+        System.out.println("Піраміда:");
+        pyramid.printInfo();
+    }
+}
