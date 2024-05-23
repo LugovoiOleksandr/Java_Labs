@@ -1,1 +1,46 @@
+import java.util.ArrayList;
+import java.util.Random;
+public class TaxiService {
+    public static void main(String[] args) {
+        ArrayList<Car> cars = new ArrayList<>();
+// Створення машинок
+        cars.add(new Car("Сovrette C7", 150, new Driver("Олег", 30, 7), 20000, 2018));
+// Додайте ще машинок...
+// Ремонт половини автопарку
+        for (int i = 0; i < cars.size() / 2; i++) {
+            Car car = cars.get(i);
+            car.setEnginePower((int) (car.getEnginePower() * 1.1));
+// збільшення потужності на 10%
+            car.setDriver(new Driver("New Driver", 25, 2)); //найняти нового водія
+        }
+// Підвищення потужності і ціни кожній другій машині
+        for (int i = 0; i < cars.size(); i += 2) {
+            Car car = cars.get(i);
+            car.setEnginePower((int) (car.getEnginePower() * 1.1));
+// збільшення потужності на 10%
+            car.setPrice(car.getPrice() * 1.05); // підвищення ціни на 5%
+        }
+// Перевірка досвіду водіїв
+        for (Car car : cars) {
+            Driver driver = car.getDriver();
+            if (driver.getDrivingExperience() < 5 && driver.getAge() > 25) {
+                driver.setDrivingExperience(driver.getDrivingExperience() + 1); //збільшення досвіду на 1 рік
+            }
+        }
+// Вибір рандомної машини та виведення повідомлення
+        Car randomCar = getRandomCar(cars.toArray(new Car[0]));
+        System.out.println("Автомобіль марки " +
+                randomCar.getBrand() + " з водієм " + randomCar.getDriver().getName()
+                + " виїхав за вами");
+// Повідомлення про прибуття водія на місце
+        System.out.println("Водій " +
+                randomCar.getDriver().getName() + " прибув на місце");
+    }
+
+    // Метод для вибору рандомної машини
+    public static Car getRandomCar(Car[] cars) {
+        Random random = new Random();
+        return cars[random.nextInt(cars.length)];
+    }
+}
 
